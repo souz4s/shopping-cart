@@ -6,7 +6,9 @@ export default async function handle(req: NextApiRequest, res: NextApiResponse) 
 
     if (req.method === 'GET') {
         handleGET(productId, res)
-    }else if (req.method === 'DELETE') {
+    } else if (req.method === 'POST') {
+        handlePOST(productId, req, res)
+    } else if (req.method === 'DELETE') {
         handleDELETE(productId, res)
     } else {
         throw new Error(
@@ -21,6 +23,18 @@ async function handleGET(productId, res) {
         where: {
             id: Number(productId)
         }
+    })
+    res.json(products)
+}
+
+//POST /api/products/:id
+async function handlePOST(productId, req, res) {
+    const data = req.body;
+    const products =  await prisma.products.update({
+        where: {
+            id: Number(productId)
+        },
+        data: data
     })
     res.json(products)
 }
