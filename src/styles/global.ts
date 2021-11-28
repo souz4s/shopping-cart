@@ -7,6 +7,7 @@ export default createGlobalStyle`
         margin: 0;
         list-style: none;
         border: 0;
+        font-family: 'Roboto', sans-serif;
     }
 
     a {
