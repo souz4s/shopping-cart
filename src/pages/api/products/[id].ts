@@ -6,7 +6,7 @@ export default async function handle(req: NextApiRequest, res: NextApiResponse) 
 
     if (req.method === 'GET') {
         handleGET(productId, res)
-    } else if (req.method === 'POST') {
+    } else if (req.method === 'PUT') {
         handlePOST(productId, req, res)
     } else if (req.method === 'DELETE') {
         handleDELETE(productId, res)
