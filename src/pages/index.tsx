@@ -6,8 +6,17 @@ import styled from "styled-components";
 
 const Main = styled.div`
   display: grid;
+  justify-content: center;
   align-items: center;
-  height: 90vh;
+  width: 67%;
+  max-width: 970px;
+  height: 90vh; 
+  margin: 0 auto;
+
+  @media(min-width: 1000px) { 
+    display: flex;
+    justify-content: space-between;
+  }
 `
 
 type Props = {
