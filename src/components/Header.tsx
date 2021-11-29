@@ -1,5 +1,7 @@
+/* eslint-disable @next/next/link-passhref */
 import Image from "next/image";
 import styled from "styled-components";
+import Link from "next/link"
 
 const Nav = styled.div`
     display: flex;
@@ -21,7 +23,9 @@ export default function Header() {
                 <a href="https://github.com/souz4s"><Image src="/img/github.svg" alt="github icon" width={24} height={24} /></a>
                 <a href="https://www.linkedin.com/in/pedro-souza-29084520b/"><Image src="/img/linkedin.svg" alt="lnkedin icon" width={24} height={24} /></a>
                 <Cart>
-                    <Image src="/img/shopping-cart.svg" alt="shoppig cart icon" width={24} height={24} />
+                    <Link href="/cart">
+                        <Image src="/img/shopping-cart.svg" alt="shoppig cart icon" width={24} height={24} />
+                    </Link>
                 </Cart>
             </Nav>
         </>
