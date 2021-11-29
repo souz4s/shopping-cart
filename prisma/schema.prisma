@@ -21,3 +21,14 @@ model products {
   createdAt     DateTime  @default(now())
   updateAt      DateTime? @updatedAt
 }
+
+model cart {
+  id            Int       @id @default(autoincrement())
+  name          String
+  image_url     String
+  price         Decimal  @db.Decimal(10,2)
+  ipi           Decimal  @db.Decimal(10,2)
+  description   String
+  createdAt     DateTime  @default(now())
+  updateAt      DateTime? @updatedAt
+}
