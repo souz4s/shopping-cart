@@ -1,3 +1,4 @@
+import Image from "next/image";
 import styled from "styled-components";
 
 const Nav = styled.div`
@@ -9,9 +10,7 @@ const Nav = styled.div`
     margin: 30px auto;
 `
 
-const Icon = styled.img`
-    width: 24px;
-    height: 24px;
+const Cart = styled.div`
     cursor: pointer;
 `
 
@@ -19,9 +18,11 @@ export default function Header() {
     return(
         <>
             <Nav>
-                <a href="https://github.com/souz4s"><Icon src="/img/github.svg" alt="github icon" /></a>
-                <a href="https://www.linkedin.com/in/pedro-souza-29084520b/"><Icon src="/img/linkedin.svg" alt="lnkedin icon" /></a>
-                <Icon src="/img/shopping-cart.svg" alt="shoppig cart icon" />
+                <a href="https://github.com/souz4s"><Image src="/img/github.svg" alt="github icon" width={24} height={24} /></a>
+                <a href="https://www.linkedin.com/in/pedro-souza-29084520b/"><Image src="/img/linkedin.svg" alt="lnkedin icon" width={24} height={24} /></a>
+                <Cart>
+                    <Image src="/img/shopping-cart.svg" alt="shoppig cart icon" width={24} height={24} />
+                </Cart>
             </Nav>
         </>
     )
