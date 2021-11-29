@@ -1,6 +1,7 @@
+/* eslint-disable @next/next/link-passhref */
 import styled from "styled-components";
 import Image from "next/image";
-import Router from "next/router"
+import Link from "next/link"
 
 const Head = styled.div`
     display: flex;
@@ -18,7 +19,9 @@ export default function CartHeader() {
     return (
         <>
             <Head>
-                <Image className="back" onClick={() => Router.back()} src="/img/arrow-left.svg" alt="back icon" width={24} height={24} />
+                <Link href="/">
+                    <Image className="back" src="/img/arrow-left.svg" alt="back icon" width={24} height={24} />
+                </Link>
             </Head>
         </>
     )
