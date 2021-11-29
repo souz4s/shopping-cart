@@ -7,7 +7,7 @@ export default async function handle(req: NextApiRequest, res: NextApiResponse) 
     if (req.method === 'GET') {
         handleGET(productId, res)
     } else if (req.method === 'PUT') {
-        handlePOST(productId, req, res)
+        handlePUT(productId, req, res)
     } else if (req.method === 'DELETE') {
         handleDELETE(productId, res)
     } else {
@@ -28,7 +28,7 @@ async function handleGET(productId, res) {
 }
 
 //POST /api/products/:id
-async function handlePOST(productId, req, res) {
+async function handlePUT(productId, req, res) {
     const data = req.body;
     const products =  await prisma.products.update({
         where: {
