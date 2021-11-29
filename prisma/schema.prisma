@@ -12,11 +12,12 @@ datasource db {
 
 
 model products {
-  id        Int       @id @default(autoincrement())
-  name      String
-  image_url String
-  price     String
-  ipi       String
-  createdAt DateTime  @default(now())
-  updateAt  DateTime? @updatedAt
+  id            Int       @id @default(autoincrement())
+  name          String
+  image_url     String
+  price         Decimal  @db.Decimal(10,2)
+  ipi           Decimal  @db.Decimal(10,2)
+  description   String
+  createdAt     DateTime  @default(now())
+  updateAt      DateTime? @updatedAt
 }
