@@ -27,7 +27,7 @@ async function handleGET(productId, res) {
     res.json(products)
 }
 
-//POST /api/products/:id
+//PUT /api/products/:id
 async function handlePUT(productId, req, res) {
     const data = req.body;
     const products =  await prisma.products.update({
