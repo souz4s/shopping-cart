@@ -1,8 +1,3 @@
-time being spent on this project
-
-[![wakatime](https://wakatime.com/badge/user/cb7c086b-464a-4a9d-a63b-7fda1e9cabd4/project/133710a0-d2fd-4ea2-90a0-11e0b12d72d9.svg)](https://wakatime.com/badge/user/cb7c086b-464a-4a9d-a63b-7fda1e9cabd4/project/133710a0-d2fd-4ea2-90a0-11e0b12d72d9)
-
-
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
